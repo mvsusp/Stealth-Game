@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour {
         anim = GetComponent<Animator>();
         hash = GameObject.FindGameObjectWithTag(Tags.gameController).GetComponent<HashIds>();
         anim.SetLayerWeight(1, 100f);
-        Debug.Log(anim.GetLayerName(1));
     }
 
     void FixedUpdate()
