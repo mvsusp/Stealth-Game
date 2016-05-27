@@ -29,8 +29,6 @@ public class CameraMovement : MonoBehaviour {
 
         foreach (var checkPoint in checkPoints)
         {
-            Debug.DrawLine(player.position, checkPoint, Color.green);
-
             if (ViewingPosCheck(checkPoint))
             {
                 break;
@@ -46,8 +44,6 @@ public class CameraMovement : MonoBehaviour {
         RaycastHit hit;
         if (Physics.Raycast(checkPos, player.position - checkPos, out hit, relCameraPosMag))
         {
-            Debug.DrawLine(checkPos, player.position, Color.yellow);
-
             if (hit.transform != player)
             {
                 return false;
